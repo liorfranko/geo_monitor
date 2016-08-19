@@ -1,11 +1,11 @@
 geo_api_url: http://ip-api.com/json
-timeout: 5
-average: 20
-warning_time: 2000  #In milliseconds
+timeout: 5            # Timeout of the http request
+average: 20           # The number of latencies results for the average calculation
+warning_time: 2000    # In milliseconds
 latency:
   - name: google.com
     url: https://google.com/
 datacerters:
-  - ip: 
-    dc: 
-    isp:
+  - ip:               # The ip address of the border routers in the datacenter
+    dc:               # The name of the datacenter
+    isp:              # The ISP name of this internet line
