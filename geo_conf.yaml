@@ -1,11 +1,11 @@
-geo_api_url: http://ip-api.com/json
-timeout: 5            # Timeout of the http request
-average: 20           # The number of latencies results for the average calculation
-warning_time: 2000    # In milliseconds
+geo_api_url: http://ip-api.com/json     # Host to get the local geo location from.
+timeout: 5                              # Timeout of the http request, in seconds.
+average: 20                             # The number of latencies results for the average calculation.
+warning_time: 2000                      # In milliseconds
 latency:
-  - name: google.com
-    url: https://google.com/
+  - name: google.com                    # The name of the sample
+    url: https://google.com/            # Valid url that answer to http get
 datacerters:
-  - ip:               # The ip address of the border routers in the datacenter
-    dc:               # The name of the datacenter
-    isp:              # The ISP name of this internet line
+  - ip:                                 # The ip address of the border routers in the datacenter.
+    dc:                                 # The name of the datacenter.
+    isp:                                # The ISP name of this internet line.
