@@ -83,8 +83,7 @@ while True:
                                                                     "{0:.3f}ms".format(round(sum(latency_dict[url]) /
                                                                                              len(latency_dict[url]),
                                                                                              2))), bcolors.ENDC
-        print "------------------------------------------------------------------------" \
-              "---------------------------------------------------------"
+        print "-" * 129
     except KeyboardInterrupt:
         print "Bye bye..."
         sys.exit(1)
