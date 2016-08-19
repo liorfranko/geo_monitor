@@ -62,7 +62,7 @@ while (True):
                 print bcolors.WARNING + "{:<50} {:30} {:>10}".format(name, str(let), sum(dict[url])/len(dict[url])) + bcolors.ENDC
             else:
                 print bcolors.OKGREEN + "{:<50} {:30} {:>10}".format(name, str(let), sum(dict[url])/len(dict[url])) + bcolors.ENDC
-        print "-----------------------------------------------------------------------------------------------------------------------------"
+        print "----------------------------------------------------------------------------------------------"
     except KeyboardInterrupt:
         print "Bye bye..."
         sys.exit(1)
