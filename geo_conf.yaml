@@ -3,68 +3,9 @@ timeout: 5
 average: 20
 warning_time: 2000  #In milliseconds
 latency:
-  - name: accdn-a.lpsnmedia.net
-    url: https://accdn-a.lpsnmedia.net/lbtest
-  - name: adminlogin-a.liveperson.net
-    url: https://adminlogin-a.liveperson.net/lbtest
-  - name: api-a.liveperson.net
-    url: https://api-a.liveperson.net/lbtest
-  - name: lpcdn-a.lpsnmedia.net
-    url: https://lpcdn-a.lpsnmedia.net/lbtest
-  - name: lptag-a.liveperson.net
-    url: https://lptag-a.liveperson.net/lbtest
-  - name: m-a.liveperson.net
-    url: https://m-a.liveperson.net/lbtest
-  - name: tags-a.liveperson.net
-    url: https://tags-a.liveperson.net/lbtest
-  - name: va-a.ac.liveperson.net
-    url: https://va-a.ac.liveperson.net/lbtest
-  - name: va-a.acr.liveperson.net
-    url: https://va-a.acr.liveperson.net/lbtest
-  - name: va-a.idp.liveperson.net
-    url: https://va-a.idp.liveperson.net/lbtest
-  - name: va-a.v-feed.liveperson.net
-    url: https://va-a.v-feed.liveperson.net/lbtest
-  - name: va-a.v.liveperson.net
-    url: https://va-a.v.liveperson.net/lbtest
-  - name: z1-a.le.liveperson.net
-    url: https://z1-a.le.liveperson.net/lbtest
-  - name: base.liveperson.net
-    url: https://base.liveperson.net/lbtest
+  - name: google.com
+    url: https://google.com/
 datacerters:
-  - ip: 149.6.60.38
-    dc: nl
-    isp: Cogent
-  - ip: 95.172.78.134
-    dc: nl
-    isp: Internap
-  - ip: 149.6.146.58
-    dc: uk
-    isp: Cogent
-  - ip: 94.31.32.22
-    dc: uk
-    isp: Zayo
-  - ip: 94.31.32.26
-    dc: uk
-    isp: Zayo
-  - ip: 212.187.201.110
-    dc: uk
-    isp: Level3
-  - ip: 66.150.245.66
-    dc: ca
-    isp: Internap
-  - ip: 64.125.195.114
-    dc: ca
-    isp: Abovnet
-  - ip: 66.150.126.190
-    dc: va
-    isp: Internap
-  - ip: 168.143.97.242
-    dc: va
-    isp: Ntt
-  - ip: 216.52.91.98
-    dc: va
-    isp: Internap
-  - ip: 64.125.195.110
-    dc: va
-    isp: Zayo
+  - ip: 
+    dc: 
+    isp:
