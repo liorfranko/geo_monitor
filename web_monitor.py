@@ -41,7 +41,6 @@ def latency(dest_name):
     except:
         return 5
 dict = {}
-count = 1
 while (True):
     try:
         print "{:<50} {:30} {:>10}".format('Name','Current Latency','Last 20 Average Latency')
@@ -59,13 +58,11 @@ while (True):
                     dict[url].append(let)
             if let > 2:
                 print bcolors.FAIL + "{:<50} {:30} {:>10}".format(name, str(let), sum(dict[url])/len(dict[url])) + bcolors.ENDC
-            elif let > (sum(dict[url])/count):
+            elif let > (sum(dict[url])/len(dict[url])):
                 print bcolors.WARNING + "{:<50} {:30} {:>10}".format(name, str(let), sum(dict[url])/len(dict[url])) + bcolors.ENDC
             else:
                 print bcolors.OKGREEN + "{:<50} {:30} {:>10}".format(name, str(let), sum(dict[url])/len(dict[url])) + bcolors.ENDC
         print "-----------------------------------------------------------------------------------------------------------------------------"
-        time.sleep(1)
-        count = count + 1
     except KeyboardInterrupt:
         print "Bye bye..."
         sys.exit(1)
