@@ -4,7 +4,7 @@ average: 20                             # The number of latencies results for th
 warning_time: 2000                      # In milliseconds
 latency:
   - name: google.com                    # The name of the sample
-    url: https://google.com/            # Valid url that answer to http get
+    url: https://google.com/            # Valid url to
 datacerters:
   - ip:                                 # The ip address of the border routers in the datacenter.
     dc:                                 # The name of the datacenter.
