@@ -1,0 +1,9 @@
+geo_api_url: http://ip-api.com/json
+latency:
+- name: google.co.il
+  url: https://google.co.il
+datacerters:
+- ip:
+  dc:
+  isp:
+
