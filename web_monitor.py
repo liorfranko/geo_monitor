@@ -43,11 +43,11 @@ def latency(dest_name, timeout):
     except:
         return 5
 
-
-dict = {}
+latency_dict = {}
 TIMEOUT = yaml_file['timeout']
 AVERAGE = yaml_file['average']
 WARNING_TIME = yaml_file['warning_time']
+
 while True:
     try:
         print "{:<50} {:30} {:>10}".format('Name', 'Current Latency', 'Average Latency')
@@ -55,28 +55,28 @@ while True:
             url = server['url']
             name = server['name']
             let = latency(url, TIMEOUT)
-            if not url in dict:
-                dict[url] = deque([let])
+            if not url in latency_dict:
+                latency_dict[url] = deque([let])
             else:
-                if len(dict[url]) > AVERAGE:
-                    dict[url].popleft()
-                    dict[url].append(let)
+                if len(latency_dict[url]) > AVERAGE:
+                    latency_dict[url].popleft()
+                    latency_dict[url].append(let)
                 else:
-                    dict[url].append(let)
-            if type(dict[url][0]) is str:
+                    latency_dict[url].append(let)
+            if type(latency_dict[url][0]) is str:
                 print 'int'
             if let > WARNING_TIME:
                 print bcolors.FAIL, "{:<50} {:30} {:>10}".format(name,
                                                                  "{0:.3f}ms".format(let),
-                                                                 "{0:.3f}ms".format(round(sum(dict[url]) / len(dict[url]), 2))), bcolors.ENDC
-            elif let > (sum(dict[url]) / len(dict[url])):
+                                                                 "{0:.3f}ms".format(round(sum(latency_dict[url]) / len(latency_dict[url]), 2))), bcolors.ENDC
+            elif let > (sum(latency_dict[url]) / len(latency_dict[url])):
                 print bcolors.WARNING, "{:<50} {:30} {:>10}".format(name,
                                                                     "{0:.3f}ms".format(let),
-                                                                    "{0:.3f}ms".format(round(sum(dict[url]) / len(dict[url]), 2))), bcolors.ENDC
+                                                                    "{0:.3f}ms".format(round(sum(latency_dict[url]) / len(latency_dict[url]), 2))), bcolors.ENDC
             else:
                 print bcolors.OKGREEN, "{:<50} {:30} {:>10}".format(name,
                                                                     "{0:.3f}ms".format(let),
-                                                                    "{0:.3f}ms".format(round(sum(dict[url]) / len(dict[url]), 2))), bcolors.ENDC
+                                                                    "{0:.3f}ms".format(round(sum(latency_dict[url]) / len(latency_dict[url]), 2))), bcolors.ENDC
         print "------------------------------------------------------------------------" \
               "---------------------------------------------------------"
     except KeyboardInterrupt:
